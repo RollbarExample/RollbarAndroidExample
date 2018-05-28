@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import com.rollbar.android.Rollbar;
+import com.rollbar.notifier.config.ConfigProvider;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
@@ -15,17 +16,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button=(Button)findViewById(R.id.clickMe);
+
         Rollbar.init(this);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rollbar == null) {
+                /*if (rollbar == null) {
                     Log.d("yo", "Rollbar is null, initialize before using");
                     return;
-                }
-                String test=null;
-                test.toString();
+                }*/
+               throwError();
             }
         });
+    }
+
+    private void throwError(){
+        String test=null;
+        test.toString();
     }
 }

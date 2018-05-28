@@ -5,12 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rollbar.com.rollbarexample1.MainActivity">
-
-
      <Button
          android:layout_margin="30dp"
          android:layout_centerInParent="true"
-         android:text="Throw an error"
+         android:text="Generate an error"
     android:id="@+id/clickMe"
     android:layout_width="match_parent"
     android:layout_height="50dp" />
